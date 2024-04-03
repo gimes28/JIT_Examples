@@ -13,21 +13,18 @@ public class JIT {
             n2 = n1;
             n1 = result;
         }
-
         return result;
     }
 
     public static void trackExecutionSpeed() {
-        System.out.println(
-               "Average time to execute f(100) in nanoseconds");
+        System.out.println("Average time to execute f(100) in nanoseconds");
         for(int i = 0; i < 100; i++) {
             long startTime = System.nanoTime();
             for(int j = 0; j < 50; j++) {
                 fib(100);
             }
             long totalTime = System.nanoTime() - startTime;
-            System.out.println(String.format("%f", 
-                               totalTime / 50.0));
+            System.out.println(String.format("%f", totalTime / 50.0));
         }
     }
 
