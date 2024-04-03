@@ -1,6 +1,4 @@
 //package rr.jittest;
-
-
 public class JIT {
     public static int fib(int n) {
         if (n <= 2) {
